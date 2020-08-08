@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/styles.css" />
+
+    <title>Weather Dashboard</title>
+</head>
+
+<!-- https://api.openweathermap.org/data/2.5/weather?q=YOUR_CITY&appid=YOUR_API_KEY -->
+
+<body>
+    <header class="jumbotron">
+        <h1>Weather Dashboard</h1>
+    </header>
+
+    <!-- Main header: 'Weather Dashboard' col-4-->
+    <div class="container">
+        <div class="row">
+            <!-- Right column -->
+            <div class="col-4 mt-4">
+                <!-- Search input field : 'Search for a city'-->
+                <h2>Search for a city:</h2>
+                <form class="search" style="margin-left:0px;">
+                    <input id="userCity" type="text" placeholder="Search.." name="search2">
+                    <button class ="searchBtn" type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+            <!-- Main Section col-8 -->
+            <div class="col-8 mt-4">
+                <!-- resultsDiv -->
+                <div class="mainResult">
+                    <!-- Header: cityname and todays date -->
+                    <h2 id="cityDiv" style=display:inline>City</h2>
+                    <h2 id="dateDiv" style=display:inline>Todays date </h2>
+                    <h2 id="iconDiv" style=display:inline> icon </h2>
+                    <p>Main results here</p>
+                    <!-- temperature -->
+                    <!-- humidity -->
+                    <!-- wind speed -->
+                    <!-- UV Index - red: unfavorable yellow: moderate green: favorable -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Search history  -->
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <div class="historyDiv">
+                    <p>Search history here</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <!-- 5 day forecast div -->
+    <div class="container">
+        <div class="row">
+            <div class="col-8">
+                <div class="forecastDiv">
+                    <p>Forecast cards</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- cards -->
+    <!-- each: Date +icon + temp + humidity -->
+
+
+    <!-- Save most recent search results to local storage -->
+
+    <body>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+        <script src="scripts.js">
+            var cityQueryURL = "https://api.openweathermap.org/data/2.5/weather?q={city name}&appid=90f207048ae63b6cb40d90f49ace5dfc"
+            var oneCallURL = "https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude={part}&appid=90f207048ae63b6cb40d90f49ace5dfc"
+
+    // part = optional parameter to exclude ie. current, minutely, hourly etc
+    // use cityQueryURL to get coordinates of requested city to use one call API
+        </script>
+    </body>
+
+</html>
