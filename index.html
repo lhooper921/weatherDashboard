@@ -23,12 +23,22 @@
         <div class="row">
             <!-- Right column -->
             <div class="col-4 mt-4">
+                <div class="container"></div>
                 <!-- Search input field : 'Search for a city'-->
                 <h2>Search for a city:</h2>
                 <form class="search" style="margin-left:0px;">
                     <input id="userCity" type="text" placeholder="Search.." name="search2">
-                    <button class ="searchBtn" type="submit"><i class="fa fa-search"></i></button>
+                    <button class="searchBtn" type="submit"><i class="fa fa-search"></i></button>
                 </form>
+                <!-- Search history  -->
+                <div class="row">
+                    <div class="col-12 mt-4" id="historyContainer">
+                        <h4>Search History</h4>
+                        <div id="historyDiv">
+
+                        </div>
+                    </div>
+                </div>
             </div>
             <!-- Main Section col-8 -->
             <div class="col-8 mt-4">
@@ -37,39 +47,30 @@
                     <!-- Header: cityname and todays date -->
                     <div class="row">
                         <div class="col-8 mt-4">
-                          <h3  id="cityDiv" > Get Today's Weather </h3>
-                           <h4 id="dateDiv"></h4> 
+                            <h3 id="cityDiv"> Get Today's Weather </h3>
+                            <h4 id="dateDiv"></h4>
                         </div>
-                       
+
                         <div class="col-4 m-auto ">
-                         <div id="iconDiv" ><i class="fa fa-globe fa-5x" aria-hidden="true"></i> </div>   
+                            <div id="iconDiv"><i class="fa fa-globe fa-5x" aria-hidden="true"></i> </div>
                         </div>
-                   </div>
-                  <div class="currentStats">  
-                    <!-- temperature -->
-                    <div id="currentTempDiv"></div>
-                    <!-- humidity -->
-                    <div  id="currentHumidityDiv"></div>
-                    <!-- wind speed -->
-                    <div  id="currentWindDiv"></div>
-                    <!-- UV Index - red: unfavorable yellow: moderate green: favorable -->
-                    <div id="currentUVDiv"></div>
+                    </div>
+                    <div class="currentStats">
+                        <!-- temperature -->
+                        <div id="currentTempDiv"></div>
+                        <!-- humidity -->
+                        <div id="currentHumidityDiv"></div>
+                        <!-- wind speed -->
+                        <div id="currentWindDiv"></div>
+                        <!-- UV Index - red: unfavorable yellow: moderate green: favorable -->
+                        <div id="currentUVDiv"></div>
+                    </div>
                 </div>
-            </div>
             </div>
         </div>
     </div>
 
-    <!-- Search history  -->
-    <div class="container">
-        <div class="row">
-            <div class="col-4">
-                <div id="historyDiv">
-                    <p>Search history here</p>
-                </div>
-            </div>
-        </div>
-    </div>
+
 
 
 

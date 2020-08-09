@@ -61,17 +61,18 @@ console.log(response.main.temp)
             $("#currentUVDiv").text("UV Index: " + currentUV); 
           })
 
-    
+    // Get search history from local storage
           const cityHistory = JSON.parse(localStorage.getItem('cityHistory')) || [];
           cityHistory.push(cityName);
            
           localStorage.setItem('cityHistory', JSON.stringify(cityHistory));
           
           const historyList = document.getElementById('historyDiv');
+          cityHistory.splice(8);
 
-
+// Print search history to page
 historyList.innerHTML = cityHistory
-
+// Create list elements for each history item
   .map(cityHistory => {
     return `<li class="high-score">${cityHistory}</li>`;
   })
@@ -80,3 +81,17 @@ historyList.innerHTML = cityHistory
      })
 
 
+function generateHistory(){
+    const cityHistory = JSON.parse(localStorage.getItem('cityHistory')) || [];
+    
+    const historyList = document.getElementById('historyDiv');
+    cityHistory.splice(8);
+    // Print search history to page
+historyList.innerHTML = cityHistory
+// Create list elements for each history item
+  .map(cityHistory => {
+    return `<li class="high-score">${cityHistory}</li>`;
+  })
+  .join("");
+}
+generateHistory();
