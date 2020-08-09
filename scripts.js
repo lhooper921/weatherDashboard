@@ -1,4 +1,3 @@
-
 let currentDate = moment().format("l");
 
 $("#dateDiv").text(currentDate);
@@ -63,7 +62,7 @@ console.log(response.main.temp)
 
     // Get search history from local storage
           const cityHistory = JSON.parse(localStorage.getItem('cityHistory')) || [];
-          cityHistory.push(cityName);
+          cityHistory.unshift(cityName);
            
           localStorage.setItem('cityHistory', JSON.stringify(cityHistory));
           
