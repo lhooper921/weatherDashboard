@@ -12,7 +12,8 @@ $(".searchBtn").on('click',function(event){
    var inputText = $(event.target).siblings("input")
    console.log(inputText.val());
    let cityName = inputText.val();
-   localStorage.setItem(inputText.attr("id"),inputText.val())
+   localStorage.setItem('mostRecentCity', cityName);
+
 //    Add text to city name div
  $("#cityDiv").text(inputText.val());
 
@@ -36,7 +37,7 @@ console.log(response.main.temp)
         
     // Insert variables into corresponding divs
           $("#currentTempDiv").text("Temperature: " + currentTemp + " °F"); 
-          $("#currentHumidityDiv").text("Humidity: " + currentHumidity); 
+          $("#currentHumidityDiv").text("Humidity: " + currentHumidity + "%"); 
           $("#currentWindDiv").text("Wind Speed: " + currentWindSpeed); 
         //   Find current weather icon
         var currentIcon = response.weather[0].icon
@@ -60,9 +61,21 @@ console.log(response.main.temp)
             $("#currentUVDiv").text("UV Index: " + currentUV); 
           })
 
-       
-      
+    
+          const cityHistory = JSON.parse(localStorage.getItem('cityHistory')) || [];
+          cityHistory.push(cityName);
+           
+          localStorage.setItem('cityHistory', JSON.stringify(cityHistory));
           
+          const historyList = document.getElementById('historyDiv');
+
+
+historyList.innerHTML = cityHistory
+
+  .map(cityHistory => {
+    return `<li class="high-score">${cityHistory}</li>`;
+  })
+  .join("");
 })
      })
 

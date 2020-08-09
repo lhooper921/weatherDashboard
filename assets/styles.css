@@ -53,10 +53,11 @@ h1{
   }
   .mainResult {
     border: 1px solid grey;
-    margin-top: 47px;
+    background-color:#f1f1f1;
+    border-radius: 5px 40px 5px;
     margin-left: 10px;
-    padding: 10px;
-    
+    padding-left: 20px;
+    padding-bottom: 20px; 
   }
   .forecastDiv{
     float: right;
@@ -65,4 +66,14 @@ h1{
   .col-4 {
     text-align:center;
   }
+.currentStats{
+  line-height: 3rem;
+
+}
+#iconDiv {
+  background-color: #0b7dda;
+  border-radius: 50%;
+  margin-top: 20px;
+  margin-right: 20px ;
   
+}
