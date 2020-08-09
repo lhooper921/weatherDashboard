@@ -19,14 +19,14 @@ $(".searchBtn").on('click',function(event){
 
 
 // Current weather
- var queryURL= "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=90f207048ae63b6cb40d90f49ace5dfc"
+ var queryURL= "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&units=imperial&appid=90f207048ae63b6cb40d90f49ace5dfc"
  $.ajax({
     url: queryURL,
     method: "GET"
   })
    
      .then(function(response) {
-console.log(response)
+console.log(response.main.temp)
     // Define variables
           var currentTemp = response.main.temp;
           var currentHumidity = response.main.humidity;
@@ -35,7 +35,7 @@ console.log(response)
           var cityLon=response.coord.lon;
         
     // Insert variables into corresponding divs
-          $("#currentTempDiv").text("Temperature: " + currentTemp); 
+          $("#currentTempDiv").text("Temperature: " + currentTemp + " °F"); 
           $("#currentHumidityDiv").text("Humidity: " + currentHumidity); 
           $("#currentWindDiv").text("Wind Speed: " + currentWindSpeed); 
         //   Find current weather icon

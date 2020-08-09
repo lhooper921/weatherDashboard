@@ -55,7 +55,14 @@ h1{
     border: 1px solid grey;
     margin-top: 47px;
     margin-left: 10px;
+    padding: 10px;
+    
   }
   .forecastDiv{
     float: right;
   }
+
+  .col-4 {
+    text-align:center;
+  }
+  
