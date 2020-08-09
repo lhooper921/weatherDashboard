@@ -35,14 +35,19 @@
                 <!-- resultsDiv -->
                 <div class="mainResult">
                     <!-- Header: cityname and todays date -->
-                    <h2 id="cityDiv" style=display:inline>City</h2>
-                    <h2 id="dateDiv" style=display:inline>Todays date </h2>
-                    <h2 id="iconDiv" style=display:inline> icon </h2>
-                    <p>Main results here</p>
+                    <h2 id="cityDiv" style=display:inline>Select a City</h2>
+                    <h3 id="dateDiv" style=display:inline>Todays date </h3>
+                    <h2 id="iconDiv" style=display:inline> </h2>
+                   
+                    
                     <!-- temperature -->
+                    <div id="currentTempDiv"></div>
                     <!-- humidity -->
+                    <div id="currentHumidityDiv"></div>
                     <!-- wind speed -->
+                    <div id="currentWindDiv"></div>
                     <!-- UV Index - red: unfavorable yellow: moderate green: favorable -->
+                    <div id="currentUVDiv"></div>
                 </div>
             </div>
         </div>
@@ -52,7 +57,7 @@
     <div class="container">
         <div class="row">
             <div class="col-4">
-                <div class="historyDiv">
+                <div id="historyDiv">
                     <p>Search history here</p>
                 </div>
             </div>
