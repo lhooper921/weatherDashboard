@@ -61,23 +61,24 @@ h1{
     margin-left: 10px;
     padding-left: 20px;
     padding-bottom: 20px; 
+    text-align: left;
   
   }
-  .forecastDiv{
-    float: right;
-  }
+ 
 
   
 .currentStats{
   line-height: 3rem;
+  margin-left: 5rem;
 
 }
 #iconDiv {
-  background-color: #0b7dda;
-  border-radius: 50%;
+  background-color:#2196F3; 
+  border-radius: 5px 40px 5px;
   margin-top: 20px;
   margin-right: 20px ;
   text-align: center;
+  padding: 1.5rem;
   
 }
 
@@ -90,6 +91,12 @@ li {
   background-color:#f1f1f1;
   text-align: center;
 }
-h4 {
-  text-align: center;
+#cityDiv, #dateDiv{
+  text-align: left;
+  margin-left: 5rem;
+} 
+.card {
+  display: inline-flex;
+  margin: 3rem;
+  
 }

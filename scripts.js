@@ -60,13 +60,15 @@ console.log(response.main.temp)
             $("#currentUVDiv").text("UV Index: " + currentUV); 
           })
 
-    // Get search history from local storage
+         // Get search history from local storage
           const cityHistory = JSON.parse(localStorage.getItem('cityHistory')) || [];
+        //   add new items to the beginning of the array
           cityHistory.unshift(cityName);
-           
+        //    set the cityhistory key to pair with the string cityHistory
           localStorage.setItem('cityHistory', JSON.stringify(cityHistory));
-          
+          // targets the history div
           const historyList = document.getElementById('historyDiv');
+           // Limits the history list to 8 items
           cityHistory.splice(8);
 
 // Print search history to page
@@ -79,11 +81,13 @@ historyList.innerHTML = cityHistory
 })
      })
 
-
+// Function to pull previous searches from local storage upon page loading
 function generateHistory(){
+    // if there is not already one, create the cityHistory array
     const cityHistory = JSON.parse(localStorage.getItem('cityHistory')) || [];
-    
+    // targets the history div
     const historyList = document.getElementById('historyDiv');
+    // Limits the history list to 8 items
     cityHistory.splice(8);
     // Print search history to page
 historyList.innerHTML = cityHistory
