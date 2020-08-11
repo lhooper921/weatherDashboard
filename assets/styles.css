@@ -95,6 +95,12 @@ li {
   text-align: left;
   margin-left: 5rem;
 } 
+.forecastDiv {
+  margin-top:4rem;
+  text-align: center;
+background-color:#f1f1f1; 
+border-radius: 5px 40px 5px;
+}
 .card {
   display: inline-flex;
   margin: 3rem;
