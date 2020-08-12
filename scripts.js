@@ -22,16 +22,15 @@ $(".searchBtn").on('click',function(event){
    console.log(inputText.val());
    let cityName = inputText.val();
    localStorage.setItem('mostRecentCity', cityName);
-
+citySearch(cityName);
 //    Add text to city name div
  $("#cityDiv").text(inputText.val());
 
- 
-
-
+})
+function citySearch(cityVar){
 
 // Current weather
- var queryURL= "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&units=imperial&appid=90f207048ae63b6cb40d90f49ace5dfc"
+ var queryURL= "https://api.openweathermap.org/data/2.5/weather?q=" + cityVar + "&units=imperial&appid=90f207048ae63b6cb40d90f49ace5dfc"
  $.ajax({
     url: queryURL,
     method: "GET"
@@ -75,7 +74,7 @@ $(".searchBtn").on('click',function(event){
          // Get search history from local storage
           const cityHistory = JSON.parse(localStorage.getItem('cityHistory')) || [];
         //   add new items to the beginning of the array
-          cityHistory.unshift(cityName);
+          cityHistory.unshift(cityVar);
         //    set the cityhistory key to pair with the string cityHistory
           localStorage.setItem('cityHistory', JSON.stringify(cityHistory));
           // targets the history div
@@ -87,11 +86,11 @@ $(".searchBtn").on('click',function(event){
 historyList.innerHTML = cityHistory
 // Create list elements for each history item
   .map(cityHistory => {
-    return `<li class="high-score">${cityHistory}</li>`;
+    return `<button class="cityLink">${cityHistory}</button>`;
   })
   .join("");
 })
-var forecast1QueryURL="https://api.openweathermap.org/data/2.5/forecast?q=" + cityName + "&units=imperial&appid=90f207048ae63b6cb40d90f49ace5dfc" 
+var forecast1QueryURL="https://api.openweathermap.org/data/2.5/forecast?q=" + cityVar + "&units=imperial&appid=90f207048ae63b6cb40d90f49ace5dfc" 
 $.ajax({
   url: forecast1QueryURL,
   method: "GET"
@@ -100,23 +99,18 @@ $.ajax({
   console.log(response);
 
   var day1Temp = response.list[0].main.temp;
-  var day1Icon = response.list[0].weather[0].icon
   var day1Humidity = response.list[0].main.humidity;
 
   var day2Temp = response.list[8].main.temp;
-  var day2Icon = response.list[8].weather[0].icon
   var day2Humidity = response.list[8].main.humidity;
 
   var day3Temp = response.list[16].main.temp;
-  var day3Icon = response.list[16].weather[0].icon
   var day3Humidity = response.list[16].main.humidity;
 
   var day4Temp = response.list[24].main.temp;
-  var day4Icon = response.list[24].weather[0].icon
   var day4Humidity = response.list[24].main.humidity;
 
   var day5Temp = response.list[32].main.temp;
-  var day5Icon = response.list[32].weather[0].icon
   var day5Humidity = response.list[32].main.humidity;
   
  //   Find Day 1 icon
@@ -181,7 +175,7 @@ $.ajax({
    $("#humidity5").text("Humidity: " + day5Humidity + "%"); 
   
 })
-     })
+     }
 
 // Function to pull previous searches from local storage upon page loading
 function generateHistory(){
@@ -195,9 +189,21 @@ function generateHistory(){
 historyList.innerHTML = cityHistory
 // Create list elements for each history item
   .map(cityHistory => {
-    return `<li class="high-score">${cityHistory}</li>`;
+    return `<button class="cityLink">${cityHistory}</button>`;
   })
   .join("");
 }
 generateHistory();
 
+//  Search button click event
+$(".cityLink").on('click',function(event){
+ 
+  event.preventDefault();
+  let btnText = $(this)[0].innerHTML
+
+ 
+
+ 
+citySearch(btnText);
+$("#cityDiv").text(btnText);
+})

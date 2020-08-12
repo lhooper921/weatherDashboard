@@ -20,152 +20,141 @@
     </header>
 
 
-   
-        <div class="row">
-            <!-- Right column -->
-            <div class="col-3 mt-4">
-                <div class="container">
-                    <!-- Search input field : 'Search for a city'-->
-                    <h2>Search for a city:</h2>
-                    <form class="search">
-                        <input id="userCity" type="text" placeholder="Search.." name="search2">
-                        <button class="searchBtn" type="submit"><i class="fa fa-search"></i></button>
-                    </form>
-                    <!-- Search history  -->
-                    <div class="row">
-                        <div class="col-12 mt-4" id="historyContainer">
-                            <h4>Search History</h4>
-                            <div id="historyDiv">
 
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Main Section col-8 -->
-            <div class="col-9 mt-4">
-                <!-- resultsDiv -->
-                <div class="mainResult">
-                    <!-- Header: cityname and todays date -->
-                    <div class="row">
-                        <div class="col-6 mt-4">
-                            <h3 id="cityDiv"> Get Today's Weather </h3>
-                            <h4 id="dateDiv"></h4>
-                        </div>
-
-                        <div class="col-6 m-auto ">
-                            <div id="iconDiv"><i class="fa fa-globe fa-5x" aria-hidden="true" style="color:white"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="row">
-                        <div class="col-12 ">
-                            <div class="currentStats">
-                                <!-- temperature -->
-                                <div id="currentTempDiv"></div>
-                                <!-- humidity -->
-                                <div id="currentHumidityDiv"></div>
-                                <!-- wind speed -->
-                                <div id="currentWindDiv"></div>
-                                <!-- UV Index - red: unfavorable yellow: moderate green: favorable -->
-                                <div id="currentUVDiv"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-
-
-
-
-
-
-
-
-
-
-                <!-- 5 day forecast div -->
-               
-<div class="container-fluid">
-                    <div class="col-12">
-                        <div class="forecastDiv">
-                       <h3> 5-day Forecast</h3>
-
-                            <div class="card" style="width: 10rem;">
-                                <div class="card-body">
-                                    <h5 id="date1">Date day 1</h5>
-                                    <div class="forecastIcon" id="icon1"></div>
-                                    <h5 class="forecastInfo" id="temp1"></h5>
-                                    <h5 class="forecastInfo" id="humidity1"></h5>
-                                    
-                                </div>
-                            </div>
-                            <div class="card" style="width: 10rem;">
-                                <div class="card-body">
-                                    <h5 id="date2">Date day 2</h5>
-                                    <div class="forecastIcon"id="icon2"></div>
-                                    <h5 class="forecastInfo" id="temp2"></h5>
-                                    <h5 class="forecastInfo" id="humidity2"></h5>
-                                   
-                                </div>
-                            </div>
-                            <div class="card" style="width: 10rem;">
-                                <div class="card-body">
-                                    <h5 id="date3">Date day 3</h5>
-                                    <div class="forecastIcon" id="icon3"></div>
-                                    <h5 class="forecastInfo" id="temp3"></h5>
-                                    <h5 class="forecastInfo" id="humidity3"></h5>
-                                   
-                                </div>
-                            </div>
-                            <div class="card" style="width: 10rem;">
-                                <div class="card-body">
-                                    <h5 id="date4">Date day 4</h5>
-                                    <div class="forecastIcon" id="icon4"></div>
-                                    <h5 class="forecastInfo" id="temp4"></h5>
-                                    <h5 class="forecastInfo" id="humidity4"></h5>
-                                  
-                                </div>
-                            </div>
-                            <div class="card" style="width: 10rem;">
-                                <div class="card-body">
-                                    <h5 id="date5">Date day 5</h5>
-                                    <div class="forecastIcon"id="icon5"></div>
-                                    <h5 class="forecastInfo" id="temp5"></h5>
-                                    <h5 class="forecastInfo" id="humidity5"></h5>
-                                   
-                                </div>
-                            </div>
-
-
-
-
-
+    <div class="row">
+        <!-- Right column -->
+        <div class="col-3 mt-4">
+            <div class="container">
+                <!-- Search input field : 'Search for a city'-->
+                <h2>Search for a city:</h2>
+                <form class="search">
+                    <input id="userCity" type="text" placeholder="Search.." name="search2">
+                    <button class="searchBtn" type="submit"><i class="fa fa-search"></i></button>
+                </form>
+                <!-- Search history  -->
+                <div class="row">
+                    <div class="col-12 mt-4" id="historyContainer">
+                        <h4>Search History</h4>
+                        <div id="historyDiv">
 
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
-    
-    <!-- cards -->
-    <!-- each: Date +icon + temp + humidity -->
+        <!-- Main Section col-8 -->
+        <div class="col-9 mt-4">
+            
+            <!-- resultsDiv -->
+            <div class="mainResult">
+                <!-- Header: cityname and todays date -->
+                <div class="row">
+                    <div class="col-6 mt-4">
+                        <h3 id="cityDiv"> Get Today's Weather </h3>
+                        <h4 id="dateDiv"></h4>
+                    </div>
+
+                    <div class="col-6 m-auto ">
+                        <div id="iconDiv"><i class="fa fa-globe fa-5x" aria-hidden="true" style="color:white"></i>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-12 ">
+                        <div class="currentStats">
+                            <!-- temperature -->
+                            <div id="currentTempDiv"></div>
+                            <!-- humidity -->
+                            <div id="currentHumidityDiv"></div>
+                            <!-- wind speed -->
+                            <div id="currentWindDiv"></div>
+                            <!-- UV Index - red: unfavorable yellow: moderate green: favorable -->
+                            <div id="currentUVDiv"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
 
 
-    <!-- Save most recent search results to local storage -->
+
+
+
+
+
+
+
+
+
+            <!-- 5 day forecast div -->
+
+            <div class="container-fluid">
+                <div class="col-12">
+                    <div class="forecastDiv">
+                        <h3> 5-day Forecast</h3>
+
+                        <div class="card" style="width: 10rem;">
+                            <div class="card-body">
+                                <h5 id="date1">Date day 1</h5>
+                                <div class="forecastIcon" id="icon1"></div>
+                                <h5 class="forecastInfo" id="temp1"></h5>
+                                <h5 class="forecastInfo" id="humidity1"></h5>
+                            </div>
+                        </div>
+
+                        <div class="card" style="width: 10rem;">
+                            <div class="card-body">
+                                <h5 id="date2">Date day 2</h5>
+                                <div class="forecastIcon" id="icon2"></div>
+                                <h5 class="forecastInfo" id="temp2"></h5>
+                                <h5 class="forecastInfo" id="humidity2"></h5>
+                            </div>
+                        </div>
+
+                        <div class="card" style="width: 10rem;">
+                            <div class="card-body">
+                                <h5 id="date3">Date day 3</h5>
+                                <div class="forecastIcon" id="icon3"></div>
+                                <h5 class="forecastInfo" id="temp3"></h5>
+                                <h5 class="forecastInfo" id="humidity3"></h5>
+                            </div>
+                        </div>
+
+                        <div class="card" style="width: 10rem;">
+                            <div class="card-body">
+                                <h5 id="date4">Date day 4</h5>
+                                <div class="forecastIcon" id="icon4"></div>
+                                <h5 class="forecastInfo" id="temp4"></h5>
+                                <h5 class="forecastInfo" id="humidity4"></h5>
+                            </div>
+                        </div>
+
+                        <div class="card" style="width: 10rem;">
+                            <div class="card-body">
+                                <h5 id="date5">Date day 5</h5>
+                                <div class="forecastIcon" id="icon5"></div>
+                                <h5 class="forecastInfo" id="temp5"></h5>
+                                <h5 class="forecastInfo" id="humidity5"></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
 
     <body>
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
         <script src="scripts.js">
-            var cityQueryURL = "https://api.openweathermap.org/data/2.5/weather?q={city name}&appid=90f207048ae63b6cb40d90f49ace5dfc"
-            var oneCallURL = "https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude={part}&appid=90f207048ae63b6cb40d90f49ace5dfc"
 
-    // part = optional parameter to exclude ie. current, minutely, hourly etc
-    // use cityQueryURL to get coordinates of requested city to use one call API
         </script>
     </body>
 

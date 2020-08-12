@@ -100,9 +100,16 @@ li {
   text-align: center;
 background-color:#f1f1f1; 
 border-radius: 5px 40px 5px;
+padding-top:1rem;
+border: 1px solid grey;
 }
 .card {
   display: inline-flex;
   margin: 3rem;
+  
+}
+.forecastIcon{
+  background-color:#2196F3; 
+  border-radius: 5px 40px 5px;
   
 }
