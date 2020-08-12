@@ -4,7 +4,7 @@
 1. [Description](#description)
 2. [Screenshots](#screenshots)
 3. [APIs](#APIs)
-4. [Deployed Application](#deployed application)
+4. [Deployed Application](#deployedapplication)
 
 ## Description
 When the user types a city name into the input field and clicks the search button, this app will generate current temperature, humidity, wind speed, and UV index. Additionally, a 5 day forecast will display for the requested city. Each temperature will have a corresponding icon to indicate the type of weather (rain, clouds, sunny etc). UV index is color coded as follows: red = unfavorable, yellow = moderate, and green = favorable. The site will display up to 8 previous searches. Any previous search can be clicked to perform the search again.
