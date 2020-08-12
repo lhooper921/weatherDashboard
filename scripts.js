@@ -68,16 +68,18 @@ function citySearch(cityVar) {
 console.log(response);
 
           var currentUV = response.value;
+         
           $("#currentUVDiv").text("UV Index: " + currentUV);
+          
                // Add classes based on current UV index
-//    if (currentUV <3) {
-//     inputDiv.addClass('favorable');
-// }
-//     if (currentUV > 3 && currentUV<6) {
-//  inputDiv.addClass('moderate');
-// }
+   if (currentUV <3) {
+    $("#currentUVDiv").addClass('favorable');
+}
+    if (currentUV > 3 && currentUV<6) {
+      $("#currentUVDiv").addClass('moderate');
+}
      if (currentUV >6) {
-          inputDiv.addClass('unfavorable');
+      $("#currentUVDiv").addClass('unfavorable');
            }
         })
       

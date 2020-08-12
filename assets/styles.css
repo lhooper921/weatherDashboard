@@ -14,17 +14,29 @@ body {
 h1{
   font-size:50px;
   color:white;
- 
-
 }
 .favorable {
   background-color: green;
+  width: 10rem;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  
 }
 .moderate {
   background-color: yellow;
+  width: 10rem;
+  color: black;
+  font-weight: bold;
+  text-align: center;
 }
 .unfavorable {
   background-color: red;
+  width: 10rem;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  
 }
   form.search input[type=text] {
     padding: 10px;
@@ -56,13 +68,7 @@ h1{
     clear: both;
     display: table;
   }
-  #historydiv{
-   text-align: center;
-   width:100%;
-   margin: auto;
-   display:block;  
-    
-  }
+  
 
  #historyDiv button {
    display:block;
@@ -75,10 +81,10 @@ h1{
     border: 1px solid grey;
     background-color:#f1f1f1;
     border-radius: 5px 40px 5px;
-    margin-left: 10px;
     padding-left: 20px;
     padding-bottom: 20px; 
-    text-align: left;
+    
+   
   
   }
  
@@ -122,7 +128,7 @@ border: 1px solid grey;
 }
 .card {
   display: inline-flex;
-  margin: 3rem;
+  margin: 1rem;
   
 }
 .forecastIcon{
