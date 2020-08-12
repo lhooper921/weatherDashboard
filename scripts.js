@@ -72,7 +72,7 @@ console.log(response);
           $("#currentUVDiv").text("UV Index: " + currentUV);
        
                // Add classes based on current UV index
-   if (currentUV <3) {
+   if (currentUV < 3) {
     $("#currentUVDiv").addClass('favorable');
 }
     if (currentUV > 3 && currentUV<6) {
